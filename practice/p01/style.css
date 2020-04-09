@@ -1,0 +1,93 @@
+/* 
+    Trang web ở mặc định có sẵn 1 số cấu hình: như margin, padding, box-sizeing (content), ...
+    dùng "*" để select tất cả, nhằm bỏ các default 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Real Setting */
+
+.banner {
+    height: 35vh;
+    background-image: url(./res/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8vh;
+    padding-left: 8vw;
+}
+
+.banner h1, .banner h4 {
+    color: #ffffff;
+}
+
+.main-content {
+    height: 50vh;
+}
+
+.footer {
+    height: 15vh;
+}
+
+.title {
+    height: 10vh;
+    padding-top: 2vh;
+    padding-left: 3vw;
+}
+
+.image-container {
+    height: 40vh;
+}
+
+.image-col {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: 40vh;
+    width: 25vw;
+    display: inline-block;
+}
+
+.image-cell {
+    height: 18vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 25vw;
+    padding-top: 9vh;
+    padding-left: 9vw;
+    display: inline-block;
+}
+
+.image-cell h3 {
+    color: #ffffff;
+}
+
+#c1r1 {
+    background-image: url(./res/mexico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#c1r2 {
+    background-image: url(./res/new-york.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#c2r1 {
+    background-image: url(./res/tokyo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#c2r2 {
+    background-image: url(./res/paris.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#last-pic {
+    background-image: url(./res/last-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
