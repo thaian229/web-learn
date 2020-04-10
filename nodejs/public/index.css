@@ -1,0 +1,73 @@
+/* _selector {_property:_value;} */
+
+/* Cơ bản: theo Tag, Class hoặc ID */
+h1 {
+    color: red;
+}
+
+h2 {
+    color: #15B37E;
+}
+
+h3 {
+    color: rgb(158, 245, 66);
+}
+
+p {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 25px;
+}
+
+.class2 {
+    background-color: #f5bf42;
+}
+
+#first-title {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* AND Cha-con và Pseudo selectors */
+
+h2, p, #first-title {
+    font-style: italic;
+}
+
+ul li {     /* Con, có thể trực tiếp hay gián tiếp, sâu bao tầng cx đc */
+    font-size: 24px;
+}
+
+ol>li {     /* Con trực tiếp, li ngay sau ol */
+    color: aqua;
+}
+
+p:hover {
+    background-color: #42cef5;
+    background-image: url('./konosuba.jpg');
+    font-weight: bold;
+    text-decoration: dashed;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/*
+    font (size, family, style, ...)
+    background (color, image, ...)
+    text (color, align, background, ...)
+    border (color, style, width, radius, ...)
+    size (width, height, padding, margin, ...)
+    display (inline, block, inline-block, none, ...)
+    BOX (sizing, ...) --> ***
+        Margin > Border > Padding > Content. 
+        Mỗi element biểu diễn bởi 1 cái hộp. Nội dung là contents.
+*/
+
+/*
+    DISPLAY:
+        block: Chiếm hết cả dòng, những thằng sau sẽ dòng dưới. e.g: h1 h2 h3,...
+        inline: Chỉ chiếm phần chiều dài. (không định nghĩa đc width, height, border,...)
+        inline-block: Hiện thị như inline nhưng set được như block.
+        none: Ứ hiện gì hết :v.
+*/
