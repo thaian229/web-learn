@@ -14,6 +14,7 @@ window.onload = () => {
         .then((res) => res.json())
         .then((data) => {
             if(data.data) {
+                // set question content
                 console.log(data);
                 document.querySelector('.question-content').innerText = data.data.questionContent;
                 document.querySelector('.total-vote').innerHTML = Number(data.data.like) + Number(data.data.dislike);
@@ -28,8 +29,8 @@ window.onload = () => {
                     dislikePercent = 100 - Number(likePercent);
                 }
                 
-                document.querySelector('.like').innerHTML = `${likePercent}%`;
                 document.querySelector('.dislike').innerHTML = `${dislikePercent}%`;
+                document.querySelector('.like').innerHTML = `${likePercent}%`;
             } else {
                 window.alert('Question not found');
             }
@@ -38,7 +39,10 @@ window.onload = () => {
             console.log(error);
             window.alert(error.message);
         });
-    // set question content
+
 
     // add event listener
+    document.querySelector('.other-question-button').addEventListener('click', (event) => {
+        window.location.href = '/';
+    });
 };

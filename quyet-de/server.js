@@ -66,7 +66,7 @@ app.post('/create-question', (req, res) => {
 });
 
 app.get('/get-question-by-id/:questionId', (req, res) => {
-    fs.readFile('./data.json', {encoding: 'utf8'}, (error, data) => {
+    fs.readFile('./data.json', (error, data) => {
         if (error) {
             res.status(500).json({
                 success: false,
@@ -85,6 +85,24 @@ app.get('/get-question-by-id/:questionId', (req, res) => {
             res.status(200).json({
                 success: true,
                 data: selectedQuestion,
+            });
+        }
+    });
+});
+
+app.get('/get-random-question', (req, res) => {
+    fs.readFile('./data.json', (error, data) => {
+        if (error) {
+            res.status(500).json({
+                success: false,
+                message: error.message,
+            });
+        } else {
+            const questionList = JSON.parse(data);
+            const randomQuestion = questionList[Math.floor(Math.random() * questionList.length)];
+            res.status(200).json({
+                success: true,
+                data: randomQuestion,
             });
         }
     });
