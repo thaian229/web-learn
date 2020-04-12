@@ -69,7 +69,7 @@ window.onload = () => {
                     fetch(`/create-question`, {
                         method: 'POST',
                         headers: {
-                            'Content-type': 'application/json',
+                            'Content-Type': 'application/json',
                         },
                         body: JSON.stringify({
                             questionContent: content,

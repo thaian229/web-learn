@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1586705459745,
+        "questionContent": "safdfasdfaf adfsf asdfasdf",
+        "like": 0,
+        "dislike": 0,
+        "createdAt": "Sun Apr 12 2020 22:30:59 GMT+0700 (Indochina Time)"
+    },
+    {
+        "id": 1586705474523,
+        "questionContent": "safdfasdfaf adfsf asdfasdf",
+        "like": 0,
+        "dislike": 0,
+        "createdAt": "Sun Apr 12 2020 22:31:14 GMT+0700 (Indochina Time)"
+    },
+    {
+        "id": 1586705491267,
+        "questionContent": "asdlgg",
+        "like": 1,
+        "dislike": 2,
+        "createdAt": "Sun Apr 12 2020 22:31:31 GMT+0700 (Indochina Time)"
+    }
+]

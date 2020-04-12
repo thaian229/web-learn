@@ -14,7 +14,7 @@ app.get('/', (req, res) => {    // sendFile must use absolute path
 });
 
 // send through params
-app.get('/question/:questionID', (req, res) => {
+app.get('/question/:questionId', (req, res) => {
     res.sendFile(path.resolve(__dirname, './public/html/question.html'));
 });
 
@@ -60,6 +60,31 @@ app.post('/create-question', (req, res) => {
                         id: newQuestionId,
                     });
                 }
+            });
+        }
+    });
+});
+
+app.get('/get-question-by-id/:questionId', (req, res) => {
+    fs.readFile('./data.json', {encoding: 'utf8'}, (error, data) => {
+        if (error) {
+            res.status(500).json({
+                success: false,
+                message: error.message,
+            });
+        } else {
+            const questionList = JSON.parse(data);
+            let selectedQuestion;
+            for (let i = 0; i < questionList.length; i += 1) {
+                if (String(questionList[i].id) === req.params.questionId) {
+                    selectedQuestion = questionList[i];
+                    break;
+                }
+            }
+
+            res.status(200).json({
+                success: true,
+                data: selectedQuestion,
             });
         }
     });
