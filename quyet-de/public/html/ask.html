@@ -6,19 +6,25 @@
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <link type="text/css" rel="stylesheet" href="../css/ask.css" />
     <script src="../js/ask.js"></script> <!--Link to .js-->
-    <title>Ask Question</title>
+    <title>Document</title>
 </head>
 <body>
-    <a href="/">
-        <button>Home</button>
-    </a>
+    <div>
+        <a href="/">
+            <button>Home</button>
+        </a>
+    </div>
     
     <div class="container">
         <h2>Ask a question</h2>
-        <textarea id="text-input-1" rows="8" maxlength="200"></textarea>
-        <h4 id="counter-1">Character: 200/200</h4>
+        <div class="input-container">
+            <textarea maxlength="200" rows="10" class="input-question"></textarea>
+            <div class="characters-left">
+                <span>200 characters left</span>
+            </div>
+        </div>
         <div>
-            <button id="submit-1">Send</button>
+            <button class="submit-button">Send</button>
         </div>
     </div>
 
