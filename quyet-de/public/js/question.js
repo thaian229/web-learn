@@ -25,8 +25,8 @@ window.onload = () => {
                     likePercent = 50;
                     dislikePercent = 50;
                 } else {
-                    likePercent = ((data.data.like / (data.data.like + data.data.dislike))*100).toFixed(2);
-                    dislikePercent = 100 - Number(likePercent);
+                    likePercent = ((data.data.like / (data.data.like + data.data.dislike))*100).toFixed(1);
+                    dislikePercent = (100 - Number(likePercent)).toFixed(1);
                 }
                 
                 document.querySelector('.dislike').innerHTML = `${dislikePercent}%`;
