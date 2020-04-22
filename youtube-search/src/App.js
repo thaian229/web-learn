@@ -58,7 +58,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-12 text-center">
+          <div className="col-md-10 text-center">
             <img src="https://www1-lw.xda-cdn.com/files/2017/08/After-12-Years-Google-Gives-YouTube-a-New-Logo.png" alt="New YouTube Logo" />
             <h1>Let's Search</h1>
           </div>
